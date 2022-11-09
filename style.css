@@ -7,6 +7,8 @@
 }
 
 body {
+  background-image: url("croquettes.jpg");
+  background-size: cover;
   height: 100vh;
   width: 100vw;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -17,7 +19,6 @@ body {
   display: block;
   width: 100%;
   object-fit: cover;
-  inset: 0;
 }
 
 .doubleTab {
@@ -26,32 +27,51 @@ body {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
-  background-color: lightblue;
 }
 
 .picture {
-  height: 60%;
+  height: 70%;
   width: 80%;
   background-image: url("raven.jpg");
   background-position: center;
   background-size: cover;
   background-color: blue;
+  border-radius: 20px 5px 20px 5px;
+}
+
+.counterPart {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background: rgba(214, 217, 218, 0.66);
+  border-radius: 5px 20px 5px 20px;
+  place-items: center;
+  width: 80%;
+  height: 70%;
+}
+
+.counterTitle {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.counterText {
+  text-align: center;
 }
 
 .deadline {
-  background-color: darkcyan;
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   place-items: center;
   width: 90%;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 .divDetails {
+  border-radius: 10px 30px 10px 10px;
   background: black;
   color: white;
-  width: 4.2rem;
+  width: 4.5rem;
   height: 4rem;
   display: grid;
   place-items: center;
@@ -68,4 +88,11 @@ body {
   font-size: 2rem;
   color: red;
   text-align: center;
+}
+
+@media screen and (max-width: 769px) {
+  .doubleTab {
+    display: flex;
+    flex-direction: column;
+  }
 }
