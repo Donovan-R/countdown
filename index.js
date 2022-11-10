@@ -50,6 +50,7 @@ const hoursTo = document.getElementById("hour");
 const minutesTo = document.getElementById("minute");
 const secondsTo = document.getElementById("second");
 const deadline = document.querySelector(".deadline");
+const furtureExpi = document.querySelector(".counterPart");
 
 setInterval(function countDown() {
   function format(value) {
@@ -78,6 +79,6 @@ setInterval(function countDown() {
   }
   if (inBetween < 0) {
     clearInterval(countDown);
-    deadline.innerHTML = `<h4 class="expired">Le chien va bien devoir manger quelque chose</h4>`;
+    furtureExpi.innerHTML = `<div class="expired"><h4>Le chien va bien devoir manger quelque chose</h4></div>`;
   }
 }, 1000);
